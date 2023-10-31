@@ -21,8 +21,8 @@ const routes: Routes = [
   {path: 'rentbike/:bikename', component: RentbikeDetailComponent},
   {path: 'bikeparts', component: BikepartsComponent},
   {path: 'bikepart/:partname', component: BikepartDetailComponent},
-  {path: 'cart', component: AboutComponent},
-  {path: 'about', component: CartComponent},
+  {path: 'about', component: AboutComponent},
+  {path: 'cart', component: CartComponent},
   {path: 'login', component: LoginComponent},
   {path: 'admin', component: AdminComponent},
 ];
