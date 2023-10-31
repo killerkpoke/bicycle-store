@@ -16,6 +16,7 @@ import { CartComponent } from 'src/components/cart/cart.component';
 import { AboutComponent } from 'src/components/about/about.component';
 import { LoginComponent } from 'src/components/login/login.component';
 import { AdminComponent } from 'src/components/admin/admin.component';
+import { MyCardComponent } from 'src/components/my-card/my-card.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AdminComponent } from 'src/components/admin/admin.component';
     CartComponent,
     AboutComponent,
     LoginComponent,
-    AdminComponent
+    AdminComponent,
+    MyCardComponent
   ],
   imports: [
     BrowserModule,
