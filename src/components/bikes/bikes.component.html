@@ -1,3 +1,6 @@
 <div class="flex flex-wrap justify-center">
-  <app-my-card *ngFor="let card of cards" name="{{card.name}}" description="{{card.description}}" [tags]=card.tags></app-my-card>
+  <app-my-card routerLink="{{card.id}}" *ngFor="let card of cards" name="{{card.name}}" description="{{card.description}}"
+    [tags]=card.tags
+
+    ></app-my-card>
 </div>
