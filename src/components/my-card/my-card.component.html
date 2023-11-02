@@ -1,11 +1,13 @@
 <div class="flex flex-col">
-  <div class="card card-compact cursor-pointer w-96 bg-light-green shadow-xl m-6">
+  <div [@fade] [@tinyBig]="isHovered ? 'big': 'tiny'" (mouseenter)="isHovered = true" (mouseleave)="isHovered = false"
+    class="card card-compact cursor-pointer w-96 bg-light-green shadow-xl m-6">
     <figure><img src="https://images.dog.ceo/breeds/setter-gordon/n02101006_3026.jpg" alt="Bicycle" /></figure>
     <div class="card-body text-black">
       <h2 class="card-title uppercase">{{name}}</h2>
       <p class="capitalize">{{description}}</p>
       <div class="card-actions justify-start">
-        <div *ngFor="let tag of tags" class="badge badge-md bg-green text-black border border-green font-semibold">{{tag}}</div>
+        <div *ngFor="let tag of tags" class="badge badge-md bg-green text-black border border-green font-semibold">
+          {{tag}}</div>
       </div>
       <div class="card-actions justify-end">
         <button class="btn btn-success">Buy Now</button>
