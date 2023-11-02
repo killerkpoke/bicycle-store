@@ -1,3 +1,43 @@
-<p>
-  bike-detail works!
-</p>
+<div>
+  <!-- title -->
+  <h1 class="text-black text-4xl uppercase my-6 text-center underline">{{bike.name}}</h1>
+
+  <!-- description -->
+  <div>
+    <p class="text-black text-xl my-6 text-center">
+      {{bike.description}}
+    </p>
+  </div>
+
+  <!-- Carusol images - temp -->
+  <div class="carousel w-full">
+    <div *ngFor="let img of images" id="item{{img.id}}" class="carousel-item w-full justify-center">
+      <img src="{{img.src}}" alt="cycle_{{img.id}}" width="400" height="400" />
+    </div>
+
+  </div>
+  <div class="flex justify-center w-full py-2 gap-2">
+    <a *ngFor="let img of images" href="#item{{img.id}}" class="btn btn-xs">{{img.id}}</a>
+  </div>
+  <div class="flex justify-center mt-4 ">
+    <button class="btn btn-info uppercase">buy now</button>
+  </div>
+  <!-- Badges -->
+  <div class="flex justify-center mt-6">
+    <b class="text-black self-center mr-1">Tags:</b>
+    <div *ngFor="let tag of bike.tags" class="badge text-xl text-white bg-green border border-green p-3 m-1 capitalize cursor-pointer">{{tag}}</div>
+  </div>
+  <!-- Review -->
+  <div class="text-center text-black text-lg mt-6 mb-2 ">
+    <i>Review the product</i>
+  </div>
+  <div class="flex">
+    <div class="rating rating-lg flex-1 justify-center">
+      <input type="radio" name="rating-2" class="mask mask-star-2 bg-green" />
+      <input type="radio" name="rating-2" class="mask mask-star-2 bg-green" checked />
+      <input type="radio" name="rating-2" class="mask mask-star-2 bg-green" />
+      <input type="radio" name="rating-2" class="mask mask-star-2 bg-green" />
+      <input type="radio" name="rating-2" class="mask mask-star-2 bg-green" />
+    </div>
+  </div>
+</div>
