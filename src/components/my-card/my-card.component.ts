@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Tag } from 'src/types/Tag';
 
 @Component({
   selector: 'app-my-card',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-card.component.css']
 })
 export class MyCardComponent implements OnInit {
+
+  @Input() name:string = '';
+  @Input() description:string = '';
+  @Input() tags:Array<Tag> = [];
 
   constructor() { }
 
