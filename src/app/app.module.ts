@@ -18,6 +18,7 @@ import { AboutComponent } from 'src/components/about/about.component';
 import { LoginComponent } from 'src/components/login/login.component';
 import { AdminComponent } from 'src/components/admin/admin.component';
 import { MyCardComponent } from 'src/components/my-card/my-card.component';
+import { ImgSliderModule } from 'src/modules/img-slider/img-slider.module';
 
 @NgModule({
   declarations: [
@@ -34,12 +35,13 @@ import { MyCardComponent } from 'src/components/my-card/my-card.component';
     AboutComponent,
     LoginComponent,
     AdminComponent,
-    MyCardComponent
+    MyCardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ImgSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

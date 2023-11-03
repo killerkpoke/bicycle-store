@@ -8,24 +8,23 @@
       {{bike.description}}
     </p>
   </div>
-
-  <!-- Carusol images - temp -->
-  <div class="carousel w-full">
-    <div *ngFor="let img of images" id="item{{img.id}}" class="carousel-item w-full justify-center">
-      <img src="{{img.src}}" alt="cycle_{{img.id}}" width="400" height="400" />
-    </div>
-
-  </div>
-  <div class="flex justify-center w-full py-2 gap-2">
-    <a *ngFor="let img of images" href="#item{{img.id}}" class="btn btn-xs">{{img.id}}</a>
-  </div>
+  <!-- Carusol images -->
+  <app-img-slider [slides]="images"></app-img-slider>
+  <!-- Actions -->
   <div class="flex justify-center mt-4 ">
-    <button class="btn btn-info uppercase">buy now</button>
+    <button class="btn btn-error m-1 text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+      Like
+    </button>
+    <button class="btn bg-dark-green m-1 text-white">
+      <svg  class="h-6 w-6"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21 10L15 4M21 10H3M21 10L19.6431 16.7845C19.2692 18.6542 17.6275 20 15.7208 20H8.27922C6.37249 20 4.73083 18.6542 4.35689 16.7845L3 10M3 10L9 4" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+      buy now
+    </button>
   </div>
   <!-- Badges -->
   <div class="flex justify-center mt-6">
     <b class="text-black self-center mr-1">Tags:</b>
-    <div *ngFor="let tag of bike.tags" class="badge text-xl text-white bg-green border border-green p-3 m-1 capitalize cursor-pointer">{{tag}}</div>
+    <div *ngFor="let tag of bike.tags" class="badge text-white bg-green border border-green p-3 m-1 capitalize cursor-pointer">{{tag}}</div>
   </div>
   <!-- Review -->
   <div class="text-center text-black text-lg mt-6 mb-2 ">
